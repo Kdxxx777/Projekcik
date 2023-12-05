@@ -15,6 +15,10 @@ public class OrderService {
         this.nextOrderId = 1;
     }
 
+    public void placeOrderOnList(Order order) {
+        orders.put(5, order);
+    }
+
     // Metoda do składania nowego zamówienia
     public Order placeOrder(int customerId, Map<Integer, Integer> items, double totalAmount) {
         Order newOrder = new Order(nextOrderId++, customerId, items, totalAmount);
