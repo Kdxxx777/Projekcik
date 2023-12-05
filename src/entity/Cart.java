@@ -11,7 +11,11 @@ public class Cart {
         this.items = new HashMap<>();
     }
 
-    public void addToCart(int vegetableId, int quantity) {
+    public void addToCartVegetable(int vegetableId, int quantity) {
         items.put(vegetableId, items.getOrDefault(vegetableId, 0) + quantity);
+    }
+
+    public void addToCartFruit(int fruitId, int quantity) {
+        items.put(fruitId, items.getOrDefault(fruitId, 0) + quantity);
     }
 }
