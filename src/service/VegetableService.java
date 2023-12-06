@@ -16,4 +16,11 @@ public class VegetableService {
     public void addVegetable(Vegetable vegetable) {
         vegetables.put(vegetable.getId(), vegetable);
     }
+
+    public void deleteVegetable(Vegetable vegetable) {
+        vegetables.remove(vegetable.getId(), vegetable);
+    }
+
+    public void getVegetable(Vegetable vegetable) {
+    }
 }
