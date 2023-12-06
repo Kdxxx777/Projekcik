@@ -21,6 +21,7 @@ public class VegetableService {
         vegetables.remove(vegetable.getId(), vegetable);
     }
 
-    public void getVegetable(Vegetable vegetable) {
+    public Map<Integer, Vegetable> getVegetables() {
+        return vegetables;
     }
 }

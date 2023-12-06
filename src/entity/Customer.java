@@ -4,11 +4,21 @@ public class Customer {
     private int customerId;
     private String nickName;
     private String address;
+    private int age;
 
-    public Customer(int customerId, String nickName, String address) {
+    public Customer(int customerId, String nickName, String address, int age) {
         this.customerId = customerId;
         this.nickName = nickName;
         this.address = address;
+        this.age = age;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
     }
 
     public int getCustomerId() {
