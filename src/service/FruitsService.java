@@ -17,4 +17,8 @@ public class FruitsService {
     public void addFruits(Fruits fruit) {
         fruits.put(fruit.getId(), fruit);
     }
+
+    public void getFruits(){
+
+    }
 }

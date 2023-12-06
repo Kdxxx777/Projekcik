@@ -5,12 +5,18 @@ public class Fruits {
     private String name;
     private double price;
     private int quantity;
+    private String countryOfOrigin;
 
-    public Fruits(int id, String name, double price, int quantity) {
+
+    public Fruits(int id, String name, double price, int quantity, String countryOfOrigin) {
         this.id = id;
         this.name = name;
         this.price = price;
         this.quantity = quantity;
+        this.countryOfOrigin = countryOfOrigin;
+    }
+
+    public Fruits() {
     }
 
     public int getId() {
@@ -45,6 +51,14 @@ public class Fruits {
         this.quantity = quantity;
     }
 
+    public String getCountryOfOrigin() {
+        return countryOfOrigin;
+    }
+
+    public void setCountryOfOrigin(String countryOfOrigin) {
+        this.countryOfOrigin = countryOfOrigin;
+    }
+
     @Override
     public String toString() {
         return "Fruits{" +
@@ -52,6 +66,7 @@ public class Fruits {
                 ", name='" + name + '\'' +
                 ", price=" + price +
                 ", quantity=" + quantity +
+                ", countryOfOrigin='" + countryOfOrigin + '\'' +
                 '}';
     }
 }
