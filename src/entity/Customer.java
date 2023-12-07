@@ -2,15 +2,15 @@ package entity;
 
 public class Customer {
     private int customerId;
-    private String nickName;
-    private String address;
+    private String nazwaUzytkownika;
+    private String adresZamieszkania;
     private int age;
     private double discount;
 
     public Customer(int customerId, String nickName, String address, int age, double discount) {
         this.customerId = customerId;
-        this.nickName = nickName;
-        this.address = address;
+        this.nazwaUzytkownika = nickName;
+        this.adresZamieszkania = address;
         this.age = age;
         this.discount = discount;
     }
@@ -23,20 +23,20 @@ public class Customer {
         this.customerId = customerId;
     }
 
-    public String getNickName() {
-        return nickName;
+    public String getNazwaUzytkownika() {
+        return nazwaUzytkownika;
     }
 
-    public void setNickName(String nickName) {
-        this.nickName = nickName;
+    public void setNazwaUzytkownika(String nazwaUzytkownika) {
+        this.nazwaUzytkownika = nazwaUzytkownika;
     }
 
-    public String getAddress() {
-        return address;
+    public String getAdresZamieszkania() {
+        return adresZamieszkania;
     }
 
-    public void setAddress(String address) {
-        this.address = address;
+    public void setAdresZamieszkania(String adresZamieszkania) {
+        this.adresZamieszkania = adresZamieszkania;
     }
 
     public int getAge() {
