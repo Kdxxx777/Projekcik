@@ -18,7 +18,18 @@ public class FruitsService {
         fruits.put(fruit.getId(), fruit);
     }
 
-    public void getFruits(){
+    public Fruits findFruitByID(int id) {
+        for (Map.Entry<Integer, Fruits> entry : fruits.entrySet()) {
+            Fruits fruit = entry.getValue();
 
+            if (fruit.getId() == id) {
+                return fruit;
+            }
+        }
+        return null;
+    }
+
+    public Map<Integer, Fruits> getFruits() {
+        return fruits;
     }
 }
