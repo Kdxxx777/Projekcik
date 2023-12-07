@@ -21,4 +21,7 @@ public class FruitsService {
     public void getFruits(){
 
     }
+    public void deleteFruits (Fruits fruit){
+       fruits.remove(fruit);
+    }
 }
