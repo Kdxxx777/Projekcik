@@ -1,5 +1,7 @@
 package entity;
 
+import java.util.Objects;
+
 public class Drinks {
 
     private int id;
@@ -54,5 +56,29 @@ public class Drinks {
 
     public void setExportedFromOtherOrigin(boolean exportedFromOtherOrigin) {
         isExportedFromOtherOrigin = exportedFromOtherOrigin;
+    }
+
+    @Override
+    public String toString() {
+        return "Drinks{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", producer='" + producer + '\'' +
+                ", price=" + price +
+                ", isExportedFromOtherOrigin=" + isExportedFromOtherOrigin +
+                '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Drinks drinks = (Drinks) o;
+        return id == drinks.id && Double.compare(price, drinks.price) == 0 && isExportedFromOtherOrigin == drinks.isExportedFromOtherOrigin && Objects.equals(name, drinks.name) && Objects.equals(producer, drinks.producer);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, name, producer, price, isExportedFromOtherOrigin);
     }
 }
