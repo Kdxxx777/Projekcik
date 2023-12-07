@@ -5,6 +5,7 @@ public class Vegetable {
     private String name;
     private double price;
     private int quantity;
+    private String countryOfOrigin;
 
     public Vegetable(int id, String name, double price, int quantity) {
         this.id = id;
