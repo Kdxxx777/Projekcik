@@ -23,8 +23,8 @@ public class OrderService {
     public double calculatedDiscount(double totalAmount, double discount) {
         if (discount == 0) {
             return totalAmount;
-        } else  {
-            return (totalAmount * discount)+totalAmount;
+        } else {
+            return (totalAmount * discount) + totalAmount;
         }
     }
 
