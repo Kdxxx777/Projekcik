@@ -13,5 +13,6 @@ public class Main {
         Order order = new Order(1, 3, Map.of(1,1), 10d);
         OrderService orderService = new OrderService();
         orderService.placeOrderOnList(order);
+        System.out.println("Hola, que tal?");
     }
 }
