@@ -5,12 +5,17 @@ public class Vegetable {
     private String name;
     private double price;
     private int quantity;
+    private String countryOfOrigin;
 
-    public Vegetable(int id, String name, double price, int quantity) {
+    public Vegetable(int id, String name, double price, int quantity, String countryOfOrigin) {
         this.id = id;
         this.name = name;
         this.price = price;
         this.quantity = quantity;
+        this.countryOfOrigin = countryOfOrigin;
+    }
+
+    public Vegetable() {
     }
 
     public int getId() {
@@ -45,6 +50,14 @@ public class Vegetable {
         this.quantity = quantity;
     }
 
+    public String getCountryOfOrigin() {
+        return countryOfOrigin;
+    }
+
+    public void setCountryOfOrigin(String countryOfOrigin) {
+        this.countryOfOrigin = countryOfOrigin;
+    }
+
     @Override
     public String toString() {
         return "Vegetable{" +
@@ -52,6 +65,7 @@ public class Vegetable {
                 ", name='" + name + '\'' +
                 ", price=" + price +
                 ", quantity=" + quantity +
+                ", countryOfOrigin='" + countryOfOrigin + '\'' +
                 '}';
     }
 }
