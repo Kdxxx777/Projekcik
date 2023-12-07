@@ -19,6 +19,14 @@ public class OrderService {
         orders.put(5, order);
     }
 
+    public double calculatedDiscount(double totalAmount, double discount) {
+        if (discount == 0) {
+            return totalAmount;
+        } else  {
+            return (totalAmount * discount)+totalAmount;
+        }
+    }
+
     // Metoda do składania nowego zamówienia
     public Order placeOrder(int customerId, Map<Integer, Integer> items, double totalAmount) {
         Order newOrder = new Order(nextOrderId++, customerId, items, totalAmount);
