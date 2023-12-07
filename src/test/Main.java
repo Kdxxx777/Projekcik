@@ -1,5 +1,6 @@
 package test;
 
+import entity.Fruits;
 import entity.Order;
 import service.OrderService;
 
@@ -13,5 +14,8 @@ public class Main {
         Order order = new Order(1, 3, Map.of(1,1), 10d);
         OrderService orderService = new OrderService();
         orderService.placeOrderOnList(order);
+
+        Fruits fruits = new Fruits(1,"Jablko",15.99,1,"Afryka");
+        System.out.println(fruits.getCountryOfOrigin());
     }
 }
