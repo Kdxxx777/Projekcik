@@ -10,7 +10,7 @@ import java.util.Map;
 public class Main {
     public static void main(String[] args) {
         System.out.println("Czesc swiat!");
-        Order order = new Order(1, 3, Map.of(1,1), 10d);
+        Order order = new Order(2, 3, Map.of(1,1), 10d);
         OrderService orderService = new OrderService();
         orderService.placeOrderOnList(order);
     }
