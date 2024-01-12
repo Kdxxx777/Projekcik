@@ -9,11 +9,11 @@ import java.util.Map;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("To ja Fabian.");
+        System.out.println("Witaj, użytkowniku");
+        System.out.println("Dzień dobry");
         Order order = new Order(1, 3, Map.of(1,1), 10d);
         OrderService orderService = new OrderService();
         orderService.placeOrderOnList(order);
-        System.out.println("Witaj, użytkowniku");
-        System.out.println("Dzień dobry");
+
     }
 }
