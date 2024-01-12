@@ -18,6 +18,6 @@ public class CustomerService {
                 return customer;
             }
         }
-        return null;
+        throw new IllegalArgumentException("Customer with ID " + customerId + " not found");
     }
 }
