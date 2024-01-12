@@ -1,6 +1,7 @@
 package entity;
 
 import java.util.Map;
+import java.util.Objects;
 
 public class Order {
 
@@ -57,5 +58,18 @@ public class Order {
                 ", orderedItems=" + orderedItems +
                 ", totalAmount=" + totalAmount +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Order order = (Order) o;
+        return orderId == order.orderId && customerId == order.customerId && Double.compare(totalAmount, order.totalAmount) == 0 && Objects.equals(orderedItems, order.orderedItems);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(orderId, customerId, orderedItems, totalAmount);
     }
 }
