@@ -5,7 +5,7 @@ import entity.Vegetable;
 import java.util.HashMap;
 import java.util.Map;
 
-public class VegetableService {
+public class  VegetableService {
 
     private Map<Integer, Vegetable> vegetables;
 
