@@ -4,6 +4,7 @@ import entity.Order;
 import service.OrderService;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 
@@ -14,5 +15,6 @@ public class Main {
         OrderService orderService = new OrderService();
         orderService.placeOrderOnList(order);
         System.out.println("Hello");
+        System.out.println("commiting");
     }
 }
