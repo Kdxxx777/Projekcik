@@ -3,6 +3,7 @@ package test;
 import entity.Order;
 import service.OrderService;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -13,6 +14,7 @@ public class Main {
         Order order = new Order(1, 3, Map.of(1,1), 10d);
         OrderService orderService = new OrderService();
         orderService.placeOrderOnList(order);
-        System.out.println("Witaj, użytkowniku");
+        System.out.println("Witaj, użytkowniku ");
+        System.out.println("Dzisiejsza data to: " + LocalDateTime.now());
     }
 }
