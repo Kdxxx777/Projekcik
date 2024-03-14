@@ -14,5 +14,6 @@ public class Main {
         OrderService orderService = new OrderService();
         orderService.placeOrderOnList(order);
         System.out.println("Hello");
+        System.out.println("HI");
     }
 }
