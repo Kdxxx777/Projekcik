@@ -6,6 +6,7 @@ public class Fruits {
     private double price;
     private int quantity;
     private String countryOfOrigin;
+    private double weight;
 
 
     public Fruits(int id, String name, double price, int quantity, String countryOfOrigin) {
@@ -14,6 +15,23 @@ public class Fruits {
         this.price = price;
         this.quantity = quantity;
         this.countryOfOrigin = countryOfOrigin;
+    }
+
+    public Fruits(int id, String name, double price, int quantity, String countryOfOrigin, double weight) {
+        this.id = id;
+        this.name = name;
+        this.price = price;
+        this.quantity = quantity;
+        this.countryOfOrigin = countryOfOrigin;
+        this.weight = weight;
+    }
+
+    public double getWeight() {
+        return weight;
+    }
+
+    public void setWeight(double weight) {
+        this.weight = weight;
     }
 
     public Fruits() {
