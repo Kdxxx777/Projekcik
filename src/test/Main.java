@@ -15,8 +15,9 @@ public class Main {
         orderService.placeOrderOnList(order);
         System.out.println("Hello");
         System.out.println("HI");
+        sayHi();
     }
-    private void sayHi(){
+    private static void sayHi(){
         System.out.println("Hi, what is your name?");
     }
 }
