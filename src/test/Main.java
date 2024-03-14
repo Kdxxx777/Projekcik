@@ -17,13 +17,12 @@ public class Main {
         Order order1 = new Order(3, 2, Map.of(1,2), 200);
         OrderService orderService = new OrderService();
         orderService.placeOrderOnList(order);
+        sayHi();
         System.out.println("Hello, user");
-        System.out.println("Hello, friend");
-        System.out.println("Hello, mate");
         System.out.println("Good Morning");
-        System.out.println(saySema());
+
     }
-    private static String saySema(){
-        return "siemkano";
+    private static void sayHi(){
+        System.out.println("Hi, what is your name?");
     }
 }
