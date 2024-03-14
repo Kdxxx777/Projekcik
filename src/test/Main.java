@@ -18,6 +18,12 @@ public class Main {
         OrderService orderService = new OrderService();
         orderService.placeOrderOnList(order);
         System.out.println("Hello, user");
+        System.out.println("Hello, friend");
+        System.out.println("Hello, mate");
         System.out.println("Good Morning");
+        System.out.println(saySema());
+    }
+    private static String saySema(){
+        return "siemkano";
     }
 }
