@@ -17,8 +17,10 @@ public class Main {
         Order order = new Order(1, 3, Map.of(1,1), 10d);
         Order order1 = new Order(3, 2, Map.of(1,2), 200);
         OrderService orderService = new OrderService();
+        System.out.println("Whats your name?");
         orderService.placeOrderOnList(order);
         System.out.println("Hello, user");
+        System.out.println("Whats your name?");
         System.out.println("Good Morning");
     }
 }
