@@ -12,9 +12,10 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("To ja Fabian.");
         System.out.println("To ja Kamil");
-        System.out.printf("test2");
+        System.out.print("test2");
         System.out.println("abc");
-        System.out.println("abc");
+        System.out.println("To ja Alex");
+        Test.hiAlex();
         Order order = new Order(1, 3, Map.of(1,1), 10d);
         Order order1 = new Order(3, 2, Map.of(1,2), 200);
         OrderService orderService = new OrderService();
