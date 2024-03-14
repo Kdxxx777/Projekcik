@@ -14,6 +14,7 @@ public class CustomerService {
 
     public Customer getCustomer(int customerId){
         for (Customer customer : customers) {
+            System.out.println("Abc");
             if (customer.getCustomerId() == customerId){
                 return customer;
             }
