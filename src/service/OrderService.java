@@ -13,6 +13,7 @@ public class OrderService {
     public OrderService() {
         this.orders = new HashMap<>();
         this.nextOrderId = 1;
+        System.out.println("abc");
     }
 
     public void placeOrderOnList(Order order) {
