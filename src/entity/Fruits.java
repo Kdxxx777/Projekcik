@@ -6,14 +6,17 @@ public class Fruits {
     private double price;
     private int quantity;
     private String countryOfOrigin;
+    private String color;
 
 
-    public Fruits(int id, String name, double price, int quantity, String countryOfOrigin) {
+
+    public Fruits(int id, String name, double price, int quantity, String countryOfOrigin, String color) {
         this.id = id;
         this.name = name;
         this.price = price;
         this.quantity = quantity;
         this.countryOfOrigin = countryOfOrigin;
+        this.color = color;
     }
 
     public Fruits() {
