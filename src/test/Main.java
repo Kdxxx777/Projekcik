@@ -23,4 +23,7 @@ public class Main {
         System.out.println("Whats your name?");
         System.out.println("Good Morning");
     }
+    public static int xxx (){
+        return 0;
+    }
 }
