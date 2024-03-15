@@ -8,17 +8,17 @@ public class Fruits {
     private double price;
     private int quantity;
     private String countryOfOrigin;
-    private String color;
+    private String colour;
 
 
 
-    public Fruits(int id, String name, double price, int quantity, String countryOfOrigin, String color) {
+    public Fruits(int id, String name, double price, int quantity, String countryOfOrigin, String colour) {
         this.id = id;
         this.name = name;
         this.price = price;
         this.quantity = quantity;
         this.countryOfOrigin = countryOfOrigin;
-        this.color = color;
+        this.colour = colour;
     }
 
     public Fruits() {
@@ -59,12 +59,12 @@ public class Fruits {
     public String getCountryOfOrigin() {
         return countryOfOrigin;
     }
-    public String getColor() {
-        return color;
+    public String getColour() {
+        return colour;
     }
 
     public void setColor(String color) {
-        this.color = color;
+        this.colour = colour;
     }
 
     public void setCountryOfOrigin(String countryOfOrigin) {
@@ -76,12 +76,12 @@ public class Fruits {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Fruits fruits = (Fruits) o;
-        return id == fruits.id && Double.compare(price, fruits.price) == 0 && quantity == fruits.quantity && Objects.equals(name, fruits.name) && Objects.equals(countryOfOrigin, fruits.countryOfOrigin) && Objects.equals(color, fruits.color);
+        return id == fruits.id && Double.compare(price, fruits.price) == 0 && quantity == fruits.quantity && Objects.equals(name, fruits.name) && Objects.equals(countryOfOrigin, fruits.countryOfOrigin) && Objects.equals(colour, fruits.colour);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, name, price, quantity, countryOfOrigin, color);
+        return Objects.hash(id, name, price, quantity, countryOfOrigin, colour);
     }
 
     @Override
