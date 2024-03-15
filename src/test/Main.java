@@ -3,10 +3,7 @@ package test;
 import entity.Order;
 import service.OrderService;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -20,11 +17,13 @@ public class Main {
         System.out.println("Hello, user");
         System.out.println("Good Morning");
 
-        List<String> orders = new ArrayList<>();
-        String order2 = "Order 2";
-        orders.add(order2);
 
-        String order3 = "Order 3";
-        orders.add(order3);
+
+        UUID uuid = UUID.randomUUID();
+        String orderID = "Order_" + uuid.toString();
+
+        System.out.println(orderID);
+
+
     }
 }
