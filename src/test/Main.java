@@ -19,5 +19,12 @@ public class Main {
         orderService.placeOrderOnList(order);
         System.out.println("Hello, user");
         System.out.println("Good Morning");
+
+        List<String> orders = new ArrayList<>();
+        String order2 = "Order 2";
+        orders.add(order2);
+
+        String order3 = "Order 3";
+        orders.add(order3);
     }
 }
