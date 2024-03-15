@@ -1,24 +1,27 @@
 package entity;
 
+import java.util.UUID;
+
 public class Vegetable {
-    private int id;
+    private String id;
     private String name;
     private double price;
     private int quantity;
 
-    public Vegetable(int id, String name, double price, int quantity) {
+
+    public void setId(String id) {
         this.id = id;
+    }
+
+    public Vegetable( String name, double price, int quantity) {
+        this.id = UUID.randomUUID().toString();
         this.name = name;
         this.price = price;
         this.quantity = quantity;
     }
 
-    public int getId() {
+    public String getId() {
         return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public String getName() {
