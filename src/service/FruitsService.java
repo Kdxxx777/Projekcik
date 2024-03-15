@@ -22,6 +22,8 @@ public class FruitsService {
 
     }
     public void showFruits(Map<Integer, Fruits> fruits){
-        System.out.println(fruits);
+        for (Map.Entry<Integer, Fruits> entry : fruits.entrySet()){
+            System.out.println(entry.getKey() + ": " + entry.getValue());
+        }
     }
 }
