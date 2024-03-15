@@ -8,7 +8,7 @@ public class Fruits {
     private double price;
     private int quantity;
     private String countryOfOrigin;
-    private String color;
+    private String colour;
 
 
 
