@@ -21,4 +21,7 @@ public class FruitsService {
     public void getFruits(){
 
     }
+    public void showFruits(Map<Integer, Fruits> fruits){
+        System.out.println(fruits);
+    }
 }
