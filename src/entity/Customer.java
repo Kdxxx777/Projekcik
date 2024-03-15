@@ -6,6 +6,24 @@ public class Customer {
     private String address;
     private int age;
     private double discount;
+    private String phoneNumber;
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+
+    public Customer(int customerId, String nickName, String address, int age, double discount, String phoneNumber) {
+        this.customerId = customerId;
+        this.nickName = nickName;
+        this.address = address;
+        this.age = age;
+        this.discount = discount;
+        this.phoneNumber = phoneNumber;
+    }
 
     public Customer(int customerId, String nickName, String address, int age, double discount) {
         this.customerId = customerId;
