@@ -63,6 +63,10 @@ public class Fruits {
         return color;
     }
 
+    public void setColor(String color) {
+        this.color = color;
+    }
+
     public void setCountryOfOrigin(String countryOfOrigin) {
         this.countryOfOrigin = countryOfOrigin;
     }
