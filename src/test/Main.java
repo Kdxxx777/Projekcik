@@ -22,7 +22,7 @@ public class Main {
         System.out.println("Good Morning");
 
     }
-    private static void sayHi(){
+    public static void sayHi(){
         System.out.println("Hi, what is your name?");
     }
 }
