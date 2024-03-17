@@ -17,14 +17,7 @@ public class Main {
         Order order1 = new Order(3, 2, Map.of(1,2), 200);
         OrderService orderService = new OrderService();
         orderService.placeOrderOnList(order);
-        System.out.println("Hello");
-        System.out.println("HI");
-        sayHi();
         System.out.println("Hello, user");
         System.out.println("Good Morning");
-
-    }
-    private static void sayHi(){
-        System.out.println("Hi, what is your name?");
     }
 }

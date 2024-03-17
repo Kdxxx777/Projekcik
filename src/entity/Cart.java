@@ -2,6 +2,7 @@ package entity;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Objects;
 
 public class Cart {
 
@@ -17,5 +18,18 @@ public class Cart {
 
     public void addToCartFruit(int fruitId, int quantity) {
         items.put(fruitId, items.getOrDefault(fruitId, 0) + quantity);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Cart cart = (Cart) o;
+        return Objects.equals(items, cart.items);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(items);
     }
 }
