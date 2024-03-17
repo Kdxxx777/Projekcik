@@ -1,27 +1,22 @@
 package entity;
 
-import java.util.Objects;
-
-public class Fruits {
+public class Fruit {
     private int id;
     private String name;
     private double price;
     private int quantity;
     private String countryOfOrigin;
-    private String colour;
 
 
-
-    public Fruits(int id, String name, double price, int quantity, String countryOfOrigin, String colour) {
+    public Fruit(int id, String name, double price, int quantity, String countryOfOrigin) {
         this.id = id;
         this.name = name;
         this.price = price;
         this.quantity = quantity;
         this.countryOfOrigin = countryOfOrigin;
-        this.colour = colour;
     }
 
-    public Fruits() {
+    public Fruit() {
     }
 
     public int getId() {
@@ -59,29 +54,9 @@ public class Fruits {
     public String getCountryOfOrigin() {
         return countryOfOrigin;
     }
-    public String getColour() {
-        return colour;
-    }
-
-    public void setColor(String color) {
-        this.colour = colour;
-    }
 
     public void setCountryOfOrigin(String countryOfOrigin) {
         this.countryOfOrigin = countryOfOrigin;
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Fruits fruits = (Fruits) o;
-        return id == fruits.id && Double.compare(price, fruits.price) == 0 && quantity == fruits.quantity && Objects.equals(name, fruits.name) && Objects.equals(countryOfOrigin, fruits.countryOfOrigin) && Objects.equals(colour, fruits.colour);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(id, name, price, quantity, countryOfOrigin, colour);
     }
 
     @Override
