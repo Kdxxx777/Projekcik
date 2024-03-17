@@ -1,5 +1,7 @@
 package entity;
 
+import java.util.Objects;
+
 public class Customer {
     private int customerId;
     private String firstName;
@@ -73,6 +75,19 @@ public class Customer {
 
     public void setDiscount(double discount) {
         this.discount = discount;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Customer customer = (Customer) o;
+        return customerId == customer.customerId && age == customer.age && Double.compare(discount, customer.discount) == 0 && Objects.equals(nickName, customer.nickName) && Objects.equals(address, customer.address);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(customerId, nickName, address, age, discount);
     }
 
     @Override
