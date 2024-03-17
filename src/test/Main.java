@@ -27,7 +27,4 @@ public class Main {
     private static void sayHi(){
         System.out.println("Hi, what is your name?");
     }
-    private static void sayHello(){
-        System.out.println("Hello!");
-    }
 }
