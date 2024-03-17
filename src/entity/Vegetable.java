@@ -5,12 +5,26 @@ public class Vegetable {
     private String name;
     private double price;
     private int quantity;
+    private double weight;
 
-    public Vegetable(int id, String name, double price, int quantity) {
+    public Vegetable(int id) {
+        this.id = id;
+    }
+
+    public double getWeight() {
+        return weight;
+    }
+
+    public void setWeight(double weight) {
+        this.weight = weight;
+    }
+
+    public Vegetable(int id, String name, double price, int quantity, double weight) {
         this.id = id;
         this.name = name;
         this.price = price;
         this.quantity = quantity;
+        this.weight = weight;
     }
 
     public int getId() {
