@@ -1,6 +1,6 @@
 package entity;
 
-public class Fruits {
+public class Fruit {
     private int id;
     private String name;
     private double price;
@@ -8,7 +8,7 @@ public class Fruits {
     private String countryOfOrigin;
 
 
-    public Fruits(int id, String name, double price, int quantity, String countryOfOrigin) {
+    public Fruit(int id, String name, double price, int quantity, String countryOfOrigin) {
         this.id = id;
         this.name = name;
         this.price = price;
@@ -16,7 +16,7 @@ public class Fruits {
         this.countryOfOrigin = countryOfOrigin;
     }
 
-    public Fruits() {
+    public Fruit() {
     }
 
     public int getId() {
