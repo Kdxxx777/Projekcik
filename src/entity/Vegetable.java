@@ -55,4 +55,12 @@ public class Vegetable {
                 ", quantity=" + quantity +
                 '}';
     }
+
+    public int getWeight() {
+        return weight;
+    }
+
+    public void setWeight(int weight) {
+        this.weight = weight;
+    }
 }
