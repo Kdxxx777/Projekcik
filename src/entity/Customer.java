@@ -1,27 +1,35 @@
 package entity;
 
 import java.util.Objects;
+import java.util.UUID;
+
+import java.util.UUID;
 
 public class Customer {
-    private int customerId;
+    private String customerId;
     private String firstName;
     private String lastName;
     private String address;
     private int age;
     private double discount;
+    private String phoneNumber;
 
-    Customer(int customerId, String nickName, String address, int age, double discount){
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    Customer( String nickName, String address, int age, double discount){
         String[] split = nickName.split(".");
         this.firstName = split[0];
         this.lastName = split[1];
-        this.customerId = customerId;
         this.address = address;
         this.age = age;
         this.discount = discount;
+        this.customerId = UUID.randomUUID().toString();
     }
 
-    public Customer(int customerId, String firstName, String lastName, String address, int age, double discount) {
-        this.customerId = customerId;
+    public Customer(String firstName, String lastName, String address, int age, double discount) {
+        this.customerId = UUID.randomUUID().toString();
         this.firstName = firstName;
         this.lastName = lastName;
         this.address = address;
@@ -29,11 +37,11 @@ public class Customer {
         this.discount = discount;
     }
 
-    public int getCustomerId() {
+    public String getCustomerId() {
         return customerId;
     }
 
-    public void setCustomerId(int customerId) {
+    public void setId(String customerId) {
         this.customerId = customerId;
     }
 
@@ -82,12 +90,13 @@ public class Customer {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Customer customer = (Customer) o;
-        return customerId == customer.customerId && age == customer.age && Double.compare(discount, customer.discount) == 0 && Objects.equals(nickName, customer.nickName) && Objects.equals(address, customer.address);
+        return customerId == customer.customerId && age == customer.age && Double.compare(discount, customer.discount)
+                == 0  && Objects.equals(address, customer.address);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(customerId, nickName, address, age, discount);
+        return Objects.hash(customerId, address, age, discount);
     }
 
     @Override

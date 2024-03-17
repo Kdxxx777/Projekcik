@@ -14,7 +14,7 @@ public class  VegetableService {
     }
 
     public void addVegetable(Vegetable vegetable) {
-        vegetables.put(vegetable.getId(), vegetable);
+        vegetables.put(Integer.valueOf(vegetable.getId()), vegetable);
     }
 
     public void deleteVegetable(Vegetable vegetable) {

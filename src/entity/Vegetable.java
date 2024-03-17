@@ -1,40 +1,27 @@
 package entity;
 
+import java.util.UUID;
+
 import java.util.Objects;
 
 public class Vegetable {
-    private int id;
+    private String id;
     private String name;
     private double price;
     private int quantity;
     private double weight;
 
-    public Vegetable(int id) {
-        this.id = id;
-    }
 
-    public double getWeight() {
-        return weight;
-    }
-
-    public void setWeight(double weight) {
-        this.weight = weight;
-    }
-
-    public Vegetable(int id, String name, double price, int quantity, double weight) {
-        this.id = id;
+    public Vegetable( String name, double price, int quantity) {
+        this.id = UUID.randomUUID().toString();
         this.name = name;
         this.price = price;
         this.quantity = quantity;
         this.weight = weight;
     }
 
-    public int getId() {
+    public String getId() {
         return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public String getName() {
