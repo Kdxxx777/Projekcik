@@ -21,4 +21,7 @@ public class FruitsService {
     public void getFruits(){
 
     }
+    public int howManyFriuts(Map fruits){
+        return  0;
+    };
 }
