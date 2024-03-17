@@ -20,4 +20,5 @@ public class CustomerService {
         }
         throw new IllegalArgumentException("Customer with ID " + customerId + " not found");
     }
+    private int number;
 }

@@ -2,22 +2,22 @@ package entity;
 
 import java.util.UUID;
 
+import java.util.Objects;
+
 public class Vegetable {
     private String id;
     private String name;
     private double price;
     private int quantity;
+    private double weight;
 
-
-    public void setId(String id) {
-        this.id = id;
-    }
 
     public Vegetable( String name, double price, int quantity) {
         this.id = UUID.randomUUID().toString();
         this.name = name;
         this.price = price;
         this.quantity = quantity;
+        this.weight = weight;
     }
 
     public String getId() {
@@ -46,6 +46,19 @@ public class Vegetable {
 
     public void setQuantity(int quantity) {
         this.quantity = quantity;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Vegetable vegetable = (Vegetable) o;
+        return id == vegetable.id && Double.compare(price, vegetable.price) == 0 && quantity == vegetable.quantity && Objects.equals(name, vegetable.name);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, name, price, quantity);
     }
 
     @Override

@@ -1,10 +1,14 @@
 package entity;
 
+import java.util.Objects;
+import java.util.UUID;
+
 import java.util.UUID;
 
 public class Customer {
     private String customerId;
-    private String nickName;
+    private String firstName;
+    private String lastName;
     private String address;
     private int age;
     private double discount;
@@ -14,23 +18,20 @@ public class Customer {
         return phoneNumber;
     }
 
-    public void setPhoneNumber(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
-    }
-    public Customer(){};
-
-    public Customer( String nickName, String address, int age, double discount, String phoneNumber) {
-        this.customerId = UUID.randomUUID().toString();
-        this.nickName = nickName;
+    Customer( String nickName, String address, int age, double discount){
+        String[] split = nickName.split(".");
+        this.firstName = split[0];
+        this.lastName = split[1];
         this.address = address;
         this.age = age;
         this.discount = discount;
-        this.phoneNumber = phoneNumber;
+        this.customerId = UUID.randomUUID().toString();
     }
 
-    public Customer(String nickName, String address, int age, double discount) {
+    public Customer(String firstName, String lastName, String address, int age, double discount) {
         this.customerId = UUID.randomUUID().toString();
-        this.nickName = nickName;
+        this.firstName = firstName;
+        this.lastName = lastName;
         this.address = address;
         this.age = age;
         this.discount = discount;
@@ -44,12 +45,20 @@ public class Customer {
         this.customerId = customerId;
     }
 
-    public String getNickName() {
-        return nickName;
+    public String getFirstName() {
+        return firstName;
     }
 
-    public void setNickName(String nickName) {
-        this.nickName = nickName;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
     public String getAddress() {
@@ -77,10 +86,24 @@ public class Customer {
     }
 
     @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Customer customer = (Customer) o;
+        return customerId == customer.customerId && age == customer.age && Double.compare(discount, customer.discount) == 0 && Objects.equals(nickName, customer.nickName) && Objects.equals(address, customer.address);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(customerId, address, age, discount);
+    }
+
+    @Override
     public String toString() {
         return "Customer{" +
                 "customerId=" + customerId +
-                ", nickName='" + nickName + '\'' +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
                 ", address='" + address + '\'' +
                 ", age=" + age +
                 ", discount=" + discount +
