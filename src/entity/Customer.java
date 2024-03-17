@@ -1,7 +1,9 @@
 package entity;
 
+import java.util.UUID;
+
 public class Customer {
-    private int customerId;
+    private String customerId;
     private String nickName;
     private String address;
     private int age;
@@ -17,8 +19,8 @@ public class Customer {
     }
     public Customer(){};
 
-    public Customer(int customerId, String nickName, String address, int age, double discount, String phoneNumber) {
-        this.customerId = customerId;
+    public Customer( String nickName, String address, int age, double discount, String phoneNumber) {
+        this.customerId = UUID.randomUUID().toString();
         this.nickName = nickName;
         this.address = address;
         this.age = age;
@@ -26,19 +28,19 @@ public class Customer {
         this.phoneNumber = phoneNumber;
     }
 
-    public Customer(int customerId, String nickName, String address, int age, double discount) {
-        this.customerId = customerId;
+    public Customer(String nickName, String address, int age, double discount) {
+        this.customerId = UUID.randomUUID().toString();
         this.nickName = nickName;
         this.address = address;
         this.age = age;
         this.discount = discount;
     }
 
-    public int getCustomerId() {
+    public String getCustomerId() {
         return customerId;
     }
 
-    public void setCustomerId(int customerId) {
+    public void setId(String customerId) {
         this.customerId = customerId;
     }
 

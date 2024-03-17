@@ -12,7 +12,7 @@ public class CustomerService {
         customers.add(customer);
     }
 
-    public Customer getCustomer(int customerId){
+    public Customer getCustomer(String customerId){
         for (Customer customer : customers) {
             if (customer.getCustomerId() == customerId){
                 return customer;
