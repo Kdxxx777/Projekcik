@@ -12,7 +12,6 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("To ja Fabian.");
         System.out.println("To ja Kamil");
-        System.out.println("To ja Alex");
         System.out.printf("test2");
         Order order = new Order(1, 3, Map.of(1,1), 10d);
         Order order1 = new Order(3, 2, Map.of(1,2), 200);
@@ -20,12 +19,5 @@ public class Main {
         orderService.placeOrderOnList(order);
         System.out.println("Hello, user");
         System.out.println("Good Morning");
-
-    }
-    public static void sayHi(){
-        System.out.println("Hi, what is your name?");
-    }
-    private static void sayHello(){
-        System.out.println("Hello!");
     }
 }
