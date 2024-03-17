@@ -8,6 +8,16 @@ public class Customer {
     private int age;
     private double discount;
 
+    Customer(int customerId, String nickName, String address, int age, double discount){
+        String[] split = nickName.split(".");
+        this.firstName = split[0];
+        this.lastName = split[1];
+        this.customerId = customerId;
+        this.address = address;
+        this.age = age;
+        this.discount = discount;
+    }
+
     public Customer(int customerId, String firstName, String lastName, String address, int age, double discount) {
         this.customerId = customerId;
         this.firstName = firstName;
