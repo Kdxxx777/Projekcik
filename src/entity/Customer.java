@@ -4,14 +4,26 @@ import java.util.Objects;
 
 public class Customer {
     private int customerId;
-    private String nickName;
+    private String firstName;
+    private String lastName;
     private String address;
     private int age;
     private double discount;
 
-    public Customer(int customerId, String nickName, String address, int age, double discount) {
+    Customer(int customerId, String nickName, String address, int age, double discount){
+        String[] split = nickName.split(".");
+        this.firstName = split[0];
+        this.lastName = split[1];
         this.customerId = customerId;
-        this.nickName = nickName;
+        this.address = address;
+        this.age = age;
+        this.discount = discount;
+    }
+
+    public Customer(int customerId, String firstName, String lastName, String address, int age, double discount) {
+        this.customerId = customerId;
+        this.firstName = firstName;
+        this.lastName = lastName;
         this.address = address;
         this.age = age;
         this.discount = discount;
@@ -25,12 +37,20 @@ public class Customer {
         this.customerId = customerId;
     }
 
-    public String getNickName() {
-        return nickName;
+    public String getFirstName() {
+        return firstName;
     }
 
-    public void setNickName(String nickName) {
-        this.nickName = nickName;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
     public String getAddress() {
@@ -74,7 +94,8 @@ public class Customer {
     public String toString() {
         return "Customer{" +
                 "customerId=" + customerId +
-                ", nickName='" + nickName + '\'' +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
                 ", address='" + address + '\'' +
                 ", age=" + age +
                 ", discount=" + discount +
