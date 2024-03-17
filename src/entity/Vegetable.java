@@ -11,7 +11,7 @@ public class Vegetable {
         this.name = name;
         this.price = price;
         this.quantity = quantity;
-        System.out.println();
+        System.out.println("Vegetables");
 
     }
 
