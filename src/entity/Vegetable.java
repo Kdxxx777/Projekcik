@@ -1,5 +1,7 @@
 package entity;
 
+import java.util.Objects;
+
 public class Vegetable {
     private int id;
     private String name;
@@ -43,6 +45,19 @@ public class Vegetable {
 
     public void setQuantity(int quantity) {
         this.quantity = quantity;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Vegetable vegetable = (Vegetable) o;
+        return id == vegetable.id && Double.compare(price, vegetable.price) == 0 && quantity == vegetable.quantity && Objects.equals(name, vegetable.name);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, name, price, quantity);
     }
 
     @Override
