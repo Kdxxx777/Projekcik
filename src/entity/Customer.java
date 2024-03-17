@@ -15,6 +15,7 @@ public class Customer {
     public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
+    public Customer(){};
 
     public Customer(int customerId, String nickName, String address, int age, double discount, String phoneNumber) {
         this.customerId = customerId;
