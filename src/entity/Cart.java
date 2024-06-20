@@ -20,6 +20,14 @@ public class Cart {
         items.put(fruitId, items.getOrDefault(fruitId, 0) + quantity);
     }
 
+
+    @Override
+    public String toString() {
+        return "Cart{" +
+                "items=" + items +
+                '}';
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
