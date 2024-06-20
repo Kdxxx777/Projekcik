@@ -19,8 +19,4 @@ public class FruitService {
     public void getFruits(){
 
     }
-
-    public void removeFruitByNumber(int number) {
-        fruits.remove(number);
-    }
 }
