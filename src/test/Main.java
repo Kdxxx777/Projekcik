@@ -17,6 +17,7 @@ public class Main {
         Order order1 = new Order(3, 2, Map.of(1,2), 200);
         OrderService orderService = new OrderService();
         orderService.placeOrderOnList(order);
+        orderService.placeOrderOnList(order1);
         System.out.println("Hello, user");
         System.out.println("Good Morning");
     }
