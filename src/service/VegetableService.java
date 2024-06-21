@@ -24,4 +24,10 @@ public class  VegetableService {
     public Map<Integer, Vegetable> getVegetables() {
         return vegetables;
     }
+
+    public void showVegetables (Map<Integer, Vegetable> vegetableMap) {
+        for (Map.Entry<Integer, Vegetable> entry : vegetableMap.entrySet()) {
+            System.out.println(entry.getKey() + ": " + entry.getValue());
+        }
+    }
 }
