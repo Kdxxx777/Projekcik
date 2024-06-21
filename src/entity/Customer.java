@@ -82,12 +82,12 @@ public class Customer {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Customer customer = (Customer) o;
-        return customerId == customer.customerId && age == customer.age && Double.compare(discount, customer.discount) == 0 && Objects.equals(nickName, customer.nickName) && Objects.equals(address, customer.address);
+        return customerId == customer.customerId && age == customer.age && Double.compare(discount, customer.discount) == 0 && Objects.equals(firstName, customer.firstName) && Objects.equals(lastName, customer.lastName) && Objects.equals(address, customer.address);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(customerId, nickName, address, age, discount);
+        return Objects.hash(customerId, firstName, lastName, address, age, discount);
     }
 
     @Override
