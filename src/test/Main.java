@@ -19,5 +19,7 @@ public class Main {
         orderService.placeOrderOnList(order);
         System.out.println("Hello, user");
         System.out.println("Good Morning");
+        System.out.println("Have a good day!");
+        System.out.println("Happy morning!");
     }
 }
