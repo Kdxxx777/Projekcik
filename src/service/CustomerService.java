@@ -24,6 +24,10 @@ public class CustomerService {
     private int number;
 
     public void removeCustomer(Customer customer) {
-        customers.remove(customer);
+        if (customer == null) {
+            System.out.println("No customer found");
+        } else {
+            customers.remove(customer);
+        }
     }
 }
