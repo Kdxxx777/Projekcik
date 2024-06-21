@@ -8,17 +8,22 @@ import java.util.List;
 public class CustomerService {
     private List<Customer> customers = new ArrayList<>();
 
-    public void addCustomer(Customer customer){
+    public void addCustomer(Customer customer) {
         customers.add(customer);
     }
 
-    public Customer getCustomer(int customerId){
+    public Customer getCustomer(int customerId) {
         for (Customer customer : customers) {
-            if (customer.getCustomerId() == customerId){
+            if (customer.getCustomerId() == customerId) {
                 return customer;
             }
         }
         throw new IllegalArgumentException("Customer with ID " + customerId + " not found");
     }
+
     private int number;
+
+    public void removeCustomer(Customer customer) {
+        customers.remove(customer);
+    }
 }
