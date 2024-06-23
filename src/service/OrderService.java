@@ -25,4 +25,8 @@ public class OrderService {
         orders.put(newOrder.getOrderId(), newOrder);
         return newOrder;
     }
+
+    public void removeOrder(int id) {
+        orders.remove(id);
+    }
 }
