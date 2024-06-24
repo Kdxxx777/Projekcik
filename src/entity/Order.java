@@ -10,11 +10,11 @@ public class Order {
     private Map<Integer, Integer> orderedItems;  // Mapa id warzywa i ilości w zamówieniu
     private double totalAmount;
 
-    public Order(int orderId, int customerId, Map<Integer, Integer> orderedItems, double totalAm) {
+    public Order(int orderId, int customerId, Map<Integer, Integer> orderedItems, double amount) {
         this.orderId = orderId;
         this.customerId = customerId;
         this.orderedItems = orderedItems;
-        this.totalAmount = totalAm;
+        this.totalAmount = amount;
     }
 
     public int getOrderId() {
