@@ -6,7 +6,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class FruitService {
-    private Map<Integer, Fruit> fruits = Map.of();
+    private Map<Integer, Fruit> fruits = new HashMap<>();
 
     public FruitService() {
         this.fruits = new HashMap<>();
