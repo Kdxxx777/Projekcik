@@ -20,8 +20,8 @@ public class OrderService {
     }
 
     // Metoda do składania nowego zamówienia
-    public Order placeOrder(int customerId, Map<Integer, Integer> items, double total) {
-        Order newOrder = new Order(nextOrderId++, customerId, items, total);
+    public Order placeOrder(int customerId, Map<Integer, Integer> items, double totalCost) {
+        Order newOrder = new Order(nextOrderId++, customerId, items, totalCost);
         orders.put(newOrder.getOrderId(), newOrder);
         return newOrder;
     }
