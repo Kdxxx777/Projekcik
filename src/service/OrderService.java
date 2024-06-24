@@ -12,7 +12,7 @@ public class OrderService {
 
     public OrderService() {
         this.orders = new HashMap<>();
-        this.nextOrderId = 1;
+        this.nextOrderId = 4;
     }
 
     public void placeOrderOnList(Order order) {
