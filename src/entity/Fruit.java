@@ -1,5 +1,7 @@
 package entity;
 
+import java.util.Objects;
+
 public class Fruit {
     private int id;
     private String name;
@@ -57,6 +59,19 @@ public class Fruit {
 
     public void setCountryOfOrigin(String countryOfOrigin) {
         this.countryOfOrigin = countryOfOrigin;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Fruit fruit = (Fruit) o;
+        return id == fruit.id && Double.compare(price, fruit.price) == 0 && quantity == fruit.quantity && Objects.equals(name, fruit.name) && Objects.equals(countryOfOrigin, fruit.countryOfOrigin);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, name, price, quantity, countryOfOrigin);
     }
 
     @Override
