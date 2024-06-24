@@ -12,13 +12,13 @@ public class CustomerService {
         customers.add(customer);
     }
 
-    public Customer getCustomer(int customerId) {
+    public Customer getCustomer(int id) {
         for (Customer customer : customers) {
-            if (customer.getCustomerId() == customerId) {
+            if (customer.getCustomerId() == id) {
                 return customer;
             }
         }
-        throw new IllegalArgumentException("Customer with ID " + customerId + " not found");
+        throw new IllegalArgumentException("Customer with ID " + id + " not found");
     }
 
     private int number;
