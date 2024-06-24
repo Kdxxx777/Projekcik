@@ -12,7 +12,7 @@ public class OrderService {
 
     public OrderService() {
         this.orders = new HashMap<>();
-        this.nextOrderId = 1;
+        this.nextOrderId = 4;
     }
 
     public void placeOrderOnList(Order order) {
@@ -20,8 +20,8 @@ public class OrderService {
     }
 
     // Metoda do składania nowego zamówienia
-    public Order placeOrder(int customerId, Map<Integer, Integer> items, double totalAmount) {
-        Order newOrder = new Order(nextOrderId++, customerId, items, totalAmount);
+    public Order placeOrder(int customerId, Map<Integer, Integer> items, double totalCost) {
+        Order newOrder = new Order(nextOrderId++, customerId, items, totalCost);
         orders.put(newOrder.getOrderId(), newOrder);
         return newOrder;
     }
