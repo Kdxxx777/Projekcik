@@ -30,4 +30,22 @@ public class CustomerService {
             customers.remove(customer);
         }
     }
+
+    public void getCustomerByFirstname (String firstname) {
+        for (Customer customer : customers) {
+            if (customer.getFirstName().equals(firstname)) {
+                System.out.println(customer);
+            }
+        }
+    }
+
+    public List<Customer> getAdultCustomer () {
+        List<Customer> adults = new ArrayList<>();
+        for (Customer customer : customers) {
+            if (customer.getAge() >= 18) {
+                adults.add(customer);
+            }
+        }
+        return adults;
+    }
 }
