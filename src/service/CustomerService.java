@@ -18,7 +18,7 @@ public class CustomerService {
                 return customer;
             }
         }
-        throw new IllegalArgumentException("Customer with ID " + id + " not found");
+        throw new IllegalArgumentException("Customer with ID " + id + " doesn't exist");
     }
 
     private int number;
