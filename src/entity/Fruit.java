@@ -71,14 +71,14 @@ public class Fruit {
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, name, price, quantity, countryOfOrigin);
+        return Objects.hash(id, fruitName, price, quantity, countryOfOrigin);
     }
 
     @Override
     public String toString() {
         return "Fruits{" +
                 "id=" + id +
-                ", name='" + name + '\'' +
+                ", name='" + fruitName + '\'' +
                 ", price=" + price +
                 ", quantity=" + quantity +
                 ", countryOfOrigin='" + countryOfOrigin + '\'' +
