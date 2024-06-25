@@ -66,7 +66,7 @@ public class Fruit {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Fruit fruit = (Fruit) o;
-        return id == fruit.id && Double.compare(price, fruit.price) == 0 && quantity == fruit.quantity && Objects.equals(name, fruit.name) && Objects.equals(countryOfOrigin, fruit.countryOfOrigin);
+        return id == fruit.id && Double.compare(price, fruit.price) == 0 && quantity == fruit.quantity && Objects.equals(fruitName, fruit.fruitName) && Objects.equals(countryOfOrigin, fruit.countryOfOrigin);
     }
 
     @Override
