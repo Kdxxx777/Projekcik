@@ -37,6 +37,11 @@ public class Cart {
         return totalItems;
     }
 
+    public void setTotalItems(int totalItems) {
+        this.totalItems = totalItems;
+    }
+
+
 
     @Override
     public String toString() {
