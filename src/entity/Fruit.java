@@ -4,7 +4,7 @@ import java.util.Objects;
 
 public class Fruit {
     private int id;
-    private String name;
+    private String fruitName;
     private double price;
     private int quantity;
     private String countryOfOrigin;
@@ -12,7 +12,7 @@ public class Fruit {
 
     public Fruit(int id, String name, double price, int quantity, String countryOfOrigin) {
         this.id = id;
-        this.name = name;
+        this.fruitName = name;
         this.price = price;
         this.quantity = quantity;
         this.countryOfOrigin = countryOfOrigin;
@@ -30,11 +30,11 @@ public class Fruit {
     }
 
     public String getName() {
-        return name;
+        return fruitName;
     }
 
     public void setName(String name) {
-        this.name = name;
+        this.fruitName = name;
     }
 
     public double getPrice() {
