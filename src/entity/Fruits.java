@@ -1,22 +1,24 @@
 package entity;
 
-public class Fruits {
+import java.util.Objects;
+
+public class Fruit {
     private int id;
-    private String name;
+    private String fruitName;
     private double price;
     private int quantity;
     private String countryOfOrigin;
 
 
-    public Fruits(int id, String name, double price, int quantity, String countryOfOrigin) {
+    public Fruit(int id, String name, double price, int quantity, String countryOfOrigin) {
         this.id = id;
-        this.name = name;
+        this.fruitName = name;
         this.price = price;
         this.quantity = quantity;
         this.countryOfOrigin = countryOfOrigin;
     }
 
-    public Fruits() {
+    public Fruit() {
     }
 
     public int getId() {
@@ -28,11 +30,11 @@ public class Fruits {
     }
 
     public String getName() {
-        return name;
+        return fruitName;
     }
 
     public void setName(String name) {
-        this.name = name;
+        this.fruitName = name;
     }
 
     public double getPrice() {
@@ -60,10 +62,23 @@ public class Fruits {
     }
 
     @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Fruit fruit = (Fruit) o;
+        return id == fruit.id && Double.compare(price, fruit.price) == 0 && quantity == fruit.quantity && Objects.equals(name, fruit.name) && Objects.equals(countryOfOrigin, fruit.countryOfOrigin);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, fruitName, price, quantity, countryOfOrigin);
+    }
+
+    @Override
     public String toString() {
         return "Fruits{" +
                 "id=" + id +
-                ", name='" + name + '\'' +
+                ", name='" + fruitName + '\'' +
                 ", price=" + price +
                 ", quantity=" + quantity +
                 ", countryOfOrigin='" + countryOfOrigin + '\'' +
