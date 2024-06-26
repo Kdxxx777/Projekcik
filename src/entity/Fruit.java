@@ -4,15 +4,15 @@ import java.util.Objects;
 
 public class Fruit {
     private int id;
-    private String wrongName;
+    private String fruitName;
     private double price;
     private int quantity;
     private String countryOfOrigin;
 
 
-    public Fruit(int id, String wrongName, double price, int quantity, String countryOfOrigin) {
+    public Fruit(int id, String name, double price, int quantity, String countryOfOrigin) {
         this.id = id;
-        this.wrongName = wrongName;
+        this.fruitName = name;
         this.price = price;
         this.quantity = quantity;
         this.countryOfOrigin = countryOfOrigin;
@@ -29,12 +29,12 @@ public class Fruit {
         this.id = id;
     }
 
-    public String getWrongName() {
-        return wrongName;
+    public String getName() {
+        return fruitName;
     }
 
-    public void setWrongName(String wrongName) {
-        this.wrongName = wrongName;
+    public void setName(String name) {
+        this.fruitName = name;
     }
 
     public double getPrice() {
@@ -66,19 +66,19 @@ public class Fruit {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Fruit fruit = (Fruit) o;
-        return id == fruit.id && Double.compare(price, fruit.price) == 0 && quantity == fruit.quantity && Objects.equals(wrongName, fruit.wrongName) && Objects.equals(countryOfOrigin, fruit.countryOfOrigin);
+        return id == fruit.id && Double.compare(price, fruit.price) == 0 && quantity == fruit.quantity && Objects.equals(fruitName, fruit.fruitName) && Objects.equals(countryOfOrigin, fruit.countryOfOrigin);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, wrongName, price, quantity, countryOfOrigin);
+        return Objects.hash(id, fruitName, price, quantity, countryOfOrigin);
     }
 
     @Override
     public String toString() {
         return "Fruits{" +
                 "id=" + id +
-                ", name='" + wrongName + '\'' +
+                ", name='" + fruitName + '\'' +
                 ", price=" + price +
                 ", quantity=" + quantity +
                 ", countryOfOrigin='" + countryOfOrigin + '\'' +

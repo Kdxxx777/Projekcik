@@ -10,11 +10,11 @@ import java.util.Map;
 public class VegetableService {
 
     private Map<Integer, Vegetable> vegetables;
-    private LocalDateTime timestamp;
+    private LocalDateTime timestampTime;
 
     public VegetableService() {
         this.vegetables = new HashMap<>();
-        this.timestamp = LocalDateTime.now();
+        this.timestampTime = LocalDateTime.now();
     }
 
     public void addVegetable(Vegetable vegetable) {
