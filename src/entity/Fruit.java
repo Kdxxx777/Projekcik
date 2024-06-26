@@ -4,15 +4,15 @@ import java.util.Objects;
 
 public class Fruit {
     private int id;
-    private String name;
+    private String wrongName;
     private double price;
     private int quantity;
     private String countryOfOrigin;
 
 
-    public Fruit(int id, String name, double price, int quantity, String countryOfOrigin) {
+    public Fruit(int id, String wrongName, double price, int quantity, String countryOfOrigin) {
         this.id = id;
-        this.name = name;
+        this.wrongName = wrongName;
         this.price = price;
         this.quantity = quantity;
         this.countryOfOrigin = countryOfOrigin;
@@ -29,12 +29,12 @@ public class Fruit {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getWrongName() {
+        return wrongName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setWrongName(String wrongName) {
+        this.wrongName = wrongName;
     }
 
     public double getPrice() {
@@ -66,19 +66,19 @@ public class Fruit {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Fruit fruit = (Fruit) o;
-        return id == fruit.id && Double.compare(price, fruit.price) == 0 && quantity == fruit.quantity && Objects.equals(name, fruit.name) && Objects.equals(countryOfOrigin, fruit.countryOfOrigin);
+        return id == fruit.id && Double.compare(price, fruit.price) == 0 && quantity == fruit.quantity && Objects.equals(wrongName, fruit.wrongName) && Objects.equals(countryOfOrigin, fruit.countryOfOrigin);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, name, price, quantity, countryOfOrigin);
+        return Objects.hash(id, wrongName, price, quantity, countryOfOrigin);
     }
 
     @Override
     public String toString() {
         return "Fruits{" +
                 "id=" + id +
-                ", name='" + name + '\'' +
+                ", name='" + wrongName + '\'' +
                 ", price=" + price +
                 ", quantity=" + quantity +
                 ", countryOfOrigin='" + countryOfOrigin + '\'' +
