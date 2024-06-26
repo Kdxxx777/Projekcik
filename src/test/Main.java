@@ -23,6 +23,8 @@ public class Main {
         System.out.println("Hello, user");
         System.out.println("Good Morning");
         System.out.println("Have a good day!");
-        System.out.println("Happy morning!");
+        System.out.println("Happy afternoon!");
+        System.out.println("Miłego dnia!");
+
     }
 }
