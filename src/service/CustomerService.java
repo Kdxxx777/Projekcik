@@ -8,6 +8,9 @@ import java.util.List;
 public class CustomerService {
     private List<Customer> customers = new ArrayList<>();
 
+
+    //zmiany
+
     public void addCustomer(Customer customer) {
         customers.add(customer);
     }
