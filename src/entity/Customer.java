@@ -5,7 +5,7 @@ import java.util.Objects;
 public class Customer {
     private int customerId;
     private String firstName;
-    private String lastNameeee;
+    private String lastNamee;
     private String address;
     private int age;
     private double discount;
@@ -13,17 +13,17 @@ public class Customer {
     Customer(int customerId, String nickName, String address, int age, double discount){
         String[] split = nickName.split(".");
         this.firstName = split[0];
-        this.lastNameeee = split[1];
+        this.lastNamee = split[1];
         this.customerId = customerId;
         this.address = address;
         this.age = age;
         this.discount = discount;
     }
 
-    public Customer(int customerId, String firstName, String lastName, String address, int age, double discount) {
+    public Customer(int customerId, String firstName, String lastNamee, String address, int age, double discount) {
         this.customerId = customerId;
         this.firstName = firstName;
-        this.lastNameeee = lastName;
+        this.lastNamee = lastNamee;
         this.address = address;
         this.age = age;
         this.discount = discount;
@@ -45,12 +45,12 @@ public class Customer {
         this.firstName = firstName;
     }
 
-    public String getLastName() {
-        return lastNameeee;
+    public String getLastNamee() {
+        return lastNamee;
     }
 
-    public void setLastName(String lastName) {
-        this.lastNameeee = lastName;
+    public void setLastNamee(String lastNamee) {
+        this.lastNamee = lastNamee;
     }
 
     public String getAddress() {
@@ -82,12 +82,12 @@ public class Customer {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Customer customer = (Customer) o;
-        return customerId == customer.customerId && age == customer.age && Double.compare(discount, customer.discount) == 0 && Objects.equals(firstName, customer.firstName) && Objects.equals(lastName, customer.lastName) && Objects.equals(address, customer.address);
+        return customerId == customer.customerId && age == customer.age && Double.compare(discount, customer.discount) == 0 && Objects.equals(firstName, customer.firstName) && Objects.equals(lastNamee, customer.lastNamee) && Objects.equals(address, customer.address);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(customerId, firstName, lastNameeee, address, age, discount);
+        return Objects.hash(customerId, firstName, lastNamee, address, age, discount);
     }
 
     @Override
@@ -95,7 +95,7 @@ public class Customer {
         return "Customer{" +
                 "customerId=" + customerId +
                 ", firstName='" + firstName + '\'' +
-                ", lastName='" + lastNameeee + '\'' +
+                ", lastName='" + lastNamee + '\'' +
                 ", address='" + address + '\'' +
                 ", age=" + age +
                 ", discount=" + discount +
