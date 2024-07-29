@@ -5,7 +5,7 @@ import java.util.Objects;
 public class Customer {
     private int customerId;
     private String firstName;
-    private String lastName;
+    private String lastNameeee;
     private String address;
     private int age;
     private double discount;
@@ -13,7 +13,7 @@ public class Customer {
     Customer(int customerId, String nickName, String address, int age, double discount){
         String[] split = nickName.split(".");
         this.firstName = split[0];
-        this.lastName = split[1];
+        this.lastNameeee = split[1];
         this.customerId = customerId;
         this.address = address;
         this.age = age;
@@ -23,7 +23,7 @@ public class Customer {
     public Customer(int customerId, String firstName, String lastName, String address, int age, double discount) {
         this.customerId = customerId;
         this.firstName = firstName;
-        this.lastName = lastName;
+        this.lastNameeee = lastName;
         this.address = address;
         this.age = age;
         this.discount = discount;
@@ -46,11 +46,11 @@ public class Customer {
     }
 
     public String getLastName() {
-        return lastName;
+        return lastNameeee;
     }
 
     public void setLastName(String lastName) {
-        this.lastName = lastName;
+        this.lastNameeee = lastName;
     }
 
     public String getAddress() {
@@ -87,7 +87,7 @@ public class Customer {
 
     @Override
     public int hashCode() {
-        return Objects.hash(customerId, firstName, lastName, address, age, discount);
+        return Objects.hash(customerId, firstName, lastNameeee, address, age, discount);
     }
 
     @Override
@@ -95,7 +95,7 @@ public class Customer {
         return "Customer{" +
                 "customerId=" + customerId +
                 ", firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
+                ", lastName='" + lastNameeee + '\'' +
                 ", address='" + address + '\'' +
                 ", age=" + age +
                 ", discount=" + discount +
