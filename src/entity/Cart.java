@@ -7,7 +7,7 @@ import java.util.Objects;
 public class Cart {
 
     private Map<Integer, Integer> items;  // Mapa id warzywa i ilości w koszyku
-    private int totalItems;
+    private int totalItem;
 
     public Cart() {
         this.items = new HashMap<>();
