@@ -30,4 +30,28 @@ public class CustomerService {
             customers.remove(customer);
         }
     }
+
+    public void printCustomerByFirstName(String firstName) {
+        if (firstName == null) {
+            throw new NullPointerException("Provided firstName is null");
+        }
+        for (Customer customer : customers) {
+            if (customer.getFirstName().equals(firstName)) {
+                System.out.println(customer);
+            }
+        }
+    }
+
+    public List<Customer> getAdultCustomers() {
+        List<Customer> adults = new ArrayList<>();
+        for (Customer customer : customers) {
+            if (customer.getAge() >= 18) {
+                adults.add(customer);
+            }
+        }
+        if (adults.isEmpty()) {
+            throw new IllegalStateException("No adults found.");
+        }
+        return adults;
+    }
 }
